@@ -121,7 +121,7 @@ table tr:last-child {
 #monthly p {
   margin: .5em 2em 0;
 }
-#monthly p::first-letter{
+#monthly p::first-letter {
   font-size: 1.25em;
   font-weight: normal;
   font-family: sans-serif;
@@ -136,10 +136,38 @@ table tr:last-child {
   color: white;
 }
 
+#monthly h3:nth-of-type(odd) {
+  background-color: chocolate;
+}
+
+#monthly h3:nth-of-type(even) {
+  background-color: olive;
+}
+td:not(.day) {
+  background-color: rgb(255 255 255 / .25);
+}
 
 /* ENTERTAINMENT STYLES */
 #entertainment li {
   margin-top: 1em;
+}
+
+#entertainment li::before {
+  content: "★";
+  display: inline-block;
+  margin-right: .5em;
+  width: 1.6em;
+  height: 1.6em;
+  line-height: 1.6em;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #333;
+  color: hotpink;
+}
+
+#entertainment li.fave::after {
+  content: " (Fan Favorite)";
+  color: darkolivegreen;
 }
 
 
