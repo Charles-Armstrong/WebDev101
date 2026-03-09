@@ -1,0 +1,517 @@
+/* =========================
+   Black Goose Bistro Final
+   Cozy Bistro Theme
+   ========================= */
+
+/* ---- Color Palette ---- */
+:root {
+  --cream: #f4ead7;
+  --cream-light: #fbf6ee;
+  --black: #171413;
+  --maroon: #6b1e2b;
+  --maroon-dark: #4f1520;
+  --gold: #c49b2c;
+  --gold-light: #e2c25a;
+  --border: #ccb89b;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+/* ---- Base Page ---- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--cream);
+  color: var(--black);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Main content width */
+body > * {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---- Header ---- */
+header {
+  background: linear-gradient(to bottom, var(--cream-light), #efe1c8);
+  text-align: center;
+  padding: 1.5rem 1rem 1rem;
+  border-bottom: 4px solid var(--maroon);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+header svg,
+header img {
+  display: block;
+  margin: 0 auto 0.75rem;
+  max-width: 180px;
+  height: auto;
+}
+
+h1 {
+  margin: 0;
+  color: var(--black);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.3rem;
+  font-weight: bold;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* ---- Navigation ---- */
+nav {
+  background-color: var(--maroon);
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  box-shadow: 0 2px 6px var(--shadow);
+}
+
+nav ul {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  list-style: none;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0.2rem 0.6rem;
+}
+
+nav a {
+  display: inline-block;
+  color: #fffaf0;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    transform 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--gold);
+  color: var(--black);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+nav a:active {
+  background-color: var(--cream-light);
+  color: var(--maroon-dark);
+}
+
+/* ---- Main Text Area ---- */
+main,
+section,
+article,
+form,
+table,
+dl,
+p,
+h2,
+h3,
+h4,
+ul,
+ol {
+  max-width: 900px;
+}
+
+p,
+ul,
+ol,
+dl,
+table,
+form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+/* ---- Headings ---- */
+h2 {
+  color: var(--maroon);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.7rem;
+  margin-top: 2.2rem;
+  margin-bottom: 0.7rem;
+  text-align: center;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  margin: 0.45rem auto 0;
+  border-bottom: 3px solid var(--gold);
+}
+
+h3 {
+  color: var(--maroon-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.3rem;
+  margin-top: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ---- Links ---- */
+a {
+  color: var(--maroon);
+}
+
+a:hover,
+a:focus {
+  color: var(--maroon-dark);
+  text-decoration-thickness: 2px;
+}
+
+a:visited {
+  color: #5f2a4a;
+}
+
+/* ---- Lists ---- */
+ul,
+ol {
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.35rem;
+}
+
+/* ---- Cards / Content Blocks ---- */
+section,
+article,
+form,
+table {
+  background-color: rgba(255, 250, 242, 0.55);
+  border-radius: 14px;
+}
+
+/* ---- Images ---- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure,
+picture,
+p img {
+  display: block;
+  text-align: center;
+}
+
+.gallery-grid img,
+.thumbnail img,
+.photos img,
+main img {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+/* ---- Gallery Page ---- */
+.gallery-list,
+.thumbnails,
+.photo-grid {
+  text-align: center;
+}
+
+.gallery-list a,
+.thumbnails a,
+.photo-grid a {
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+.gallery-list img,
+.thumbnails img,
+.photo-grid img {
+  border: 3px solid var(--maroon);
+  background-color: #fff;
+  padding: 0.25rem;
+}
+
+.gallery-list img:hover,
+.thumbnails img:hover,
+.photo-grid img:hover {
+  border-color: var(--gold);
+  transform: scale(1.02);
+  transition: 0.2s ease;
+}
+
+/* ---- Gallery Subpages ---- */
+body.gallery-subpage {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+body.gallery-subpage h1 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+}
+
+body.gallery-subpage p {
+  max-width: 900px;
+}
+
+body.gallery-subpage a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  background-color: var(--maroon);
+  color: #fffaf0;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+body.gallery-subpage a:hover,
+body.gallery-subpage a:focus {
+  background-color: var(--gold);
+  color: var(--black);
+}
+
+/* ---- Forms (Pizza + Mailing List) ---- */
+form {
+  background-color: var(--cream-light);
+  border: 2px solid var(--border);
+  padding: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+fieldset {
+  border: 2px solid var(--maroon);
+  border-radius: 10px;
+  padding: 1rem 1.2rem 1.2rem;
+  margin-bottom: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+legend {
+  color: var(--maroon-dark);
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", serif;
+  padding: 0 0.5rem;
+}
+
+label {
+  font-weight: bold;
+  color: var(--black);
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.65rem 0.75rem;
+  margin-top: 0.35rem;
+  margin-bottom: 1rem;
+  border: 1px solid #a89172;
+  border-radius: 8px;
+  background-color: #fffdf9;
+  color: var(--black);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--gold);
+  border-color: var(--maroon);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 0.45rem;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background-color: var(--maroon);
+  color: #fffaf0;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.2rem;
+  margin-right: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 6px var(--shadow);
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+  background-color: var(--gold);
+  color: var(--black);
+}
+
+/* ---- Tables / Menu Pages ---- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  background-color: var(--cream-light);
+  overflow: hidden;
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+caption {
+  caption-side: top;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.3rem;
+  color: var(--maroon);
+  padding: 0.75rem;
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 0.8rem;
+  text-align: left;
+}
+
+th {
+  background-color: var(--maroon);
+  color: #fffaf0;
+}
+
+tr:nth-child(even) td {
+  background-color: #f9f1e3;
+}
+
+/* ---- Footer ---- */
+footer {
+  margin-top: 3rem;
+  padding: 1.5rem 1rem 2rem;
+  text-align: center;
+  background-color: #e7d6b8;
+  border-top: 4px solid var(--maroon);
+  color: var(--black);
+}
+
+footer #about {
+  margin-bottom: 1rem;
+}
+
+footer p {
+  margin: 0.45rem 0;
+}
+
+footer small {
+  color: var(--maroon-dark);
+  font-weight: bold;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.8rem 0 0;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 0.45rem;
+}
+
+footer img {
+  width: 34px;
+  height: 34px;
+  vertical-align: middle;
+  background-color: var(--cream-light);
+  border: 2px solid var(--maroon);
+  border-radius: 50%;
+  padding: 0.3rem;
+}
+
+footer img:hover {
+  border-color: var(--gold);
+  background-color: #fff;
+}
+
+/* ---- Horizontal Rules ---- */
+hr {
+  border: none;
+  border-top: 2px solid var(--gold);
+  width: 85%;
+  margin: 2rem auto;
+}
+
+/* ---- Utility class for page spacing ---- */
+.page-content {
+  padding: 1.5rem 1rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 700px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    letter-spacing: 0.08em;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  nav li {
+    display: block;
+    margin: 0.35rem 0;
+  }
+
+  nav a {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  body > * {
+    width: auto;
+  }
+
+  form {
+    padding: 1rem;
+  }
+}
