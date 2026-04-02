@@ -45,6 +45,13 @@ nav ul li a:link, nav ul li a:visited {
 nav ul li a:focus, nav ul li a:hover, nav ul li a:active {
   color: #fff;
 }
+nav ul li a {
+  display: block;
+  border: 1px solid;
+  border-radius: 6px;
+  padding: .5em 1em;
+  margin: .5em;
+}
 nav ul li {
   font-size: .8em;
   text-transform: uppercase;
@@ -55,6 +62,7 @@ nav ul {
   padding: 0;
   list-style-type: none;
   display: flex;
+  justify-content: center;
 }
 
 /* main "products" styles */
