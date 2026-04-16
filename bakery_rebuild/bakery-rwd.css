@@ -141,7 +141,7 @@ footer {
 /* Part 1 — 450px */
 @media screen and (min-width: 450px) {
   nav ul li {
-    flex: none; 
+    flex: none; /* equivalent to flex: 0 0 auto */
   }
   nav ul {
     justify-content: center;
