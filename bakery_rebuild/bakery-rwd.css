@@ -143,7 +143,6 @@ footer {
   nav ul li {
     flex: none;
   }
-
   nav ul {
     justify-content: center;
   }
@@ -175,37 +174,26 @@ footer {
 @media screen and (min-width: 940px) {
   #container {
     display: grid;
-    grid-template-rows: auto 1fr 5em;
+    grid-template-rows: auto min-height 5em;
     grid-template-columns: minmax(25em, 1fr) 16em;
     grid-template-areas:
-      "banner banner"
-      "main hours"
-      "footer footer";
+    "banner banner"
+    "main hours"
+    "footer footer";
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
   }
-
-  header {
-    grid-area: banner;
-  }
-
-  main {
-    grid-area: main;
-  }
-
-  aside {
+  header { grid-area: banner; }
+  main   { grid-area: main; }
+  aside  {
     grid-area: hours;
     background: url(images/scallop.png) repeat-y left top;
     background-color: #F6F3ED;
     padding: 16px;
     padding-left: 45px;
   }
-
-  footer {
-    grid-area: footer;
-  }
-
+  footer { grid-area: footer; }
   #award {
     position: absolute;
     top: 30px;
