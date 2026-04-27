@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 2em;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  transition: transform .6s ease, letter-spacing .6s ease, color .6s ease;
+}
+
+/* Added a slow, buttery title lift so the page feels smooth and polished. */
+h1:hover,
+h1:focus {
+  transform: translateY(-4px);
+  letter-spacing: 2px;
+  color: #5f8fc7;
+}
+
+.button {
+  display: inline-block;
+  padding: 1em 2em;
+  margin: 1em;
+  background-color: #9dc3e6;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,.15);
+  position: relative;
+  top: 0;
+
+  transition:
+    background-color .35s ease,
+    transform .35s ease,
+    box-shadow .35s ease,
+    top .2s ease;
+}
+
+/* Added smooth lift, color, and shadow changes to make buttons feel responsive and soft. */
+.button:hover,
+.button:focus {
+  background-color: #7aaee0;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 18px rgba(0,0,0,.2);
+}
+
+.button:active {
+  top: 3px;
+  transform: scale(.98);
+  box-shadow: 0 3px 6px rgba(0,0,0,.2);
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  padding: 1em;
+  width: 200px;
+  margin: 1em;
+  text-align: center;
+  display: inline-block;
+
+  transition:
+    transform .45s ease,
+    box-shadow .45s ease,
+    border-color .45s ease;
+}
+
+/* Added smooth card scaling and lift so hovering feels buttery instead of sharp. */
+.card:hover,
+.card:focus-within {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 14px 25px rgba(0,0,0,.18);
+  border-color: #9dc3e6;
+}
+
+img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform .5s ease, filter .5s ease;
+}
+
+/* Added gentle image zoom and brightness for a smooth interactive card effect. */
+.card:hover img,
+.card:focus-within img {
+  transform: scale(1.08);
+  filter: brightness(1.08);
+}
