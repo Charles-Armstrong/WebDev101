@@ -1,0 +1,582 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #2f3b4a;
+  line-height: 1.7;
+}
+
+/* ---------- General Layout ---------- */
+
+main {
+  width: 92%;
+  max-width: 1300px;
+  margin: 30px auto;
+}
+
+section {
+  background-color: #ffffff;
+  border: 3px solid #7cc7f2;
+  border-radius: 28px;
+  padding: 28px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(124, 199, 242, 0.15);
+}
+
+h1,
+h2,
+h3 {
+  color: #d93a4a;
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: #d93a4a;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: #2f8fcb;
+}
+
+/* ---------- Header ---------- */
+
+#header-container {
+  background: linear-gradient(to right, #7cc7f2, #b5e3fb);
+  border-bottom: 5px solid #d93a4a;
+  text-align: center;
+  padding: 25px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  width: 120px;
+  margin: 0 auto 12px auto;
+  border-radius: 50%;
+}
+
+.org-name {
+  font-size: 2.3rem;
+  color: #d93a4a;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ---------- Navigation / Flexbox ---------- */
+
+#main-nav {
+  margin-top: 18px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background-color: #ffffff;
+  color: #d93a4a;
+  border: 2px solid #d93a4a;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #d93a4a;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* ---------- Home Page ---------- */
+
+#welcome-section img {
+  width: 360px;
+  max-width: 100%;
+  float: right;
+  margin: 0 0 20px 24px;
+  border-radius: 24px;
+  border: 4px solid #7cc7f2;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+#welcome-section img:hover {
+  transform: scale(1.03);
+}
+
+.mission-text {
+  font-size: 1.05rem;
+}
+
+#featured-pet img {
+  width: 300px;
+  max-width: 100%;
+  float: left;
+  margin: 0 24px 18px 0;
+  border-radius: 24px;
+  border: 4px solid #d93a4a;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+#featured-pet img:hover {
+  transform: scale(1.04);
+}
+
+/* ---------- About Page ---------- */
+
+.mission-statement {
+  font-size: 1.05rem;
+}
+
+.team-member {
+  position: relative;
+  overflow: hidden;
+  background-color: #f8fcff;
+  border: 2px solid #c7eafb;
+  border-radius: 24px;
+  padding: 22px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(124, 199, 242, 0.22);
+}
+
+.member-photo {
+  width: 180px;
+  max-width: 100%;
+  float: left;
+  margin: 0 20px 12px 0;
+  border-radius: 22px;
+  border: 3px solid #7cc7f2;
+  object-fit: cover;
+  position: relative;
+  top: -4px;
+  transition: transform 0.3s ease;
+}
+
+.member-photo:hover {
+  transform: scale(1.05);
+}
+
+.member-bio {
+  margin-bottom: 0;
+}
+
+/* ---------- Adopt Page / Grid ---------- */
+
+.pet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.pet-card {
+  background-color: #ffffff;
+  border: 2px solid #c7eafb;
+  border-radius: 25px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(124, 199, 242, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pet-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(124, 199, 242, 0.3);
+}
+
+.pet-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 4px solid #d93a4a;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.pet-card img:hover {
+  transform: scale(1.03);
+}
+
+.pet-card h2 {
+  margin-bottom: 10px;
+}
+
+/* ---------- Events Page ---------- */
+
+#events-calendar table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#events-calendar th,
+#events-calendar td {
+  padding: 16px;
+  border: 1px solid #dbeef8;
+  text-align: left;
+  vertical-align: top;
+}
+
+#events-calendar thead {
+  background-color: #7cc7f2;
+  color: #ffffff;
+}
+
+#events-calendar tbody tr:nth-child(even) {
+  background-color: #f8fcff;
+}
+
+#events-calendar tbody tr:hover {
+  background-color: #eef8fe;
+}
+
+.highlight-event {
+  background-color: #ffe5e8;
+  font-weight: bold;
+}
+
+#media-video,
+#media-audio {
+  text-align: center;
+}
+
+#media-video iframe,
+#media-video video {
+  width: 100%;
+  max-width: 720px;
+  height: 405px;
+  border-radius: 24px;
+  border: 4px solid #7cc7f2;
+  background-color: #ffffff;
+}
+
+audio {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* ---------- Volunteer Form / Flexbox ---------- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f8fcff;
+  border: 2px solid #c7eafb;
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1 1 260px;
+}
+
+label {
+  font-weight: bold;
+  color: #d93a4a;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 6px;
+  border: 2px solid #7cc7f2;
+  border-radius: 16px;
+  background-color: #ffffff;
+  font-size: 1rem;
+  color: #2f3b4a;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+input[type="submit"] {
+  background-color: #d93a4a;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 22px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: #2f8fcb;
+  transform: scale(1.05);
+}
+
+#form-result {
+  margin-top: 20px;
+  padding: 18px;
+  background-color: #eef8fe;
+  border-radius: 18px;
+  border: 2px solid #7cc7f2;
+  font-weight: bold;
+}
+
+/* ---------- Contact Page ---------- */
+
+#social-links a {
+  display: inline-block;
+  margin: 8px;
+  padding: 10px 16px;
+  background-color: #7cc7f2;
+  color: #ffffff;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+#social-links a:hover,
+#social-links a:focus {
+  background-color: #d93a4a;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* ---------- Footer ---------- */
+
+#footer-container {
+  background-color: #2f8fcb;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 5px solid #d93a4a;
+}
+
+#footer-container .contact-info,
+#footer-container .footer-nav,
+#footer-container .social-media,
+#footer-container .copyright {
+  margin-bottom: 16px;
+}
+
+#footer-container a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#footer-container a:hover,
+#footer-container a:focus {
+  color: #ffe5e8;
+}
+
+/* ---------- Footer Social Icons ---------- */
+
+.social-media p {
+  margin-bottom: 8px;
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-media li {
+  display: inline-block;
+}
+
+.social-media img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+  transform: scale(1.15);
+}
+
+/* ---------- Clear Floats ---------- */
+
+#welcome-section::after,
+#featured-pet::after,
+.team-member::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ---------- Responsive Design: Small Screens ---------- */
+
+@media (max-width: 480px) {
+
+  main {
+    width: 94%;
+    margin: 20px auto;
+  }
+
+  section {
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  #header-container {
+    position: static;
+    padding: 15px;
+  }
+
+  .logo {
+    width: 70px;
+  }
+
+  .org-name {
+    font-size: 1.5rem;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .nav-link {
+    width: auto;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.45rem;
+  }
+
+  #welcome-section img,
+  #featured-pet img,
+  .member-photo {
+    float: none;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 20px auto;
+  }
+
+  .pet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #events-calendar {
+    overflow-x: auto;
+  }
+
+  #media-video iframe,
+  #media-video video {
+    height: 260px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+/* ---------- Responsive Design: Medium Screens ---------- */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+  main {
+    width: 94%;
+  }
+
+  .org-name {
+    font-size: 2rem;
+  }
+
+  #welcome-section img,
+  #featured-pet img {
+    width: 280px;
+  }
+
+  .member-photo {
+    width: 160px;
+  }
+
+  #media-video iframe,
+  #media-video video {
+    height: 330px;
+  }
+}
+
+/* ---------- Responsive Design: Large Screens ---------- */
+
+@media (min-width: 769px) {
+
+  .nav-list {
+    flex-direction: row;
+  }
+
+}
